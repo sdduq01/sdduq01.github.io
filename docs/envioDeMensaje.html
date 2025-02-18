@@ -34,31 +34,33 @@
         .form-container{
             display: grid;
             grid-template-rows: auto 1fr auto;
-            width: 300px;
+            width: 400px;
+            justify-items: center;
+
         }
         .logo{
             width: 250px;
             margin-bottom: 20px;
             justify-self: center;
         }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 12px;
+            text-align: center;
+            color: var(--snow-white);
+            margin-bottom: 0;
+        }
+        .subtitle{
+            color: var(--steel-gray);
+            font-size: var(--md);
+            text-align: center;
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
         .form{
             display: flex;
             flex-direction: column;
-        }
-        .label{
-            font-size: var(--sm);
-            font-weight: bold;
-            color: var(--snow-white);
-            margin-bottom: 4px;
-        }
-        .input{
-            background-color: var(--steel-gray);
-            border: none;
-            border-radius: 8px;
-            height: 28px;
-            font-size: var(--md);
-            padding: 8px;
-            margin-bottom: 12px;
         }
         .primary-button{
             background: var(--blue-navy);
@@ -71,50 +73,50 @@
             font-weight: bold;
             height: 50px;
         }
-        .secondary-button{
-            background: var(--konecta-blue);
-            border: solid 1px var(--blue-navy);
-            color: var(--snow-white);
-            border-radius: 8px;
-            width: 100%;
-            cursor: pointer;
-            font-size: var(--md);
-            font-weight: bold;
-            height: 50px;
-        }
         .login-button{
             margin-top: 20px;
-            margin-bottom: 0px;
+            margin-bottom: 20px;
         }
-        .form{
+        .email-image{
+            width: 100px;
+            height: 100px;
+            background: var(--steel-gray);
+            border-radius: 50%;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .form a{
-            color: var(--yellow-tomorrow);
-            text-decoration: none;
+        .email-image img {
+            width: 80px;
+        }
+        .resend{
             font-size: var(--sm);
-            text-align: center;
-            margin-bottom: 40px;
-            margin-top: 0;
+        }
+        .resend span{
+            color: var(--steel-gray);
+        }
+        .resend a{
+            text-decoration: none;
+            color: var(--yellow-tomorrow);
         }
     </style>
 </head>
     <body>
         <div class="login">
             <div class="form-container">
-            <img src="./ImagenCorporativa/Konecta Logo/Konecta_Logo_RGB_White.png" alt="logo" class="logo">
-            <form action="" class="form">
-                <label for="email" class="label">Email address</address></label>
-                <input type="text" id="email" placeholder="example@konecta.com" class="input input-email">
-                <label for="password" class="label">Password</label>
-                <input type="password" id="password" placeholder="*********" class="input input-password">
-                <input type="submit" value="Login" class="primary-button login-button">
-                <a href="./">Forgot my password</a>
-            </form>
-            <button class="secondary-button signup-button">
-                Sing up
-            </button>
+                <img src="./ImagenCorporativa/Konecta Logo/Konecta_Logo_RGB_White.png" alt="logo" class="logo">
+                <h1 class="title">Email has been send</h1>
+                <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
+                <div>
+                    <div class="email-image">
+                        <img src="./ImagenCorporativa/Iconos/Icono Mensage.png" alt="email">
+                    </div>
+                </div>
+                <button class="primary-button login-button">Login</button>
+                <p class="resend">
+                    <span>Didn't receive the email?</span>
+                    <a href="./ingresoDeEmail.html">Resend</a>
+                </p>
             </div>
         </div>
     </body>
